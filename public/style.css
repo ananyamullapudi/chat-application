@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 20px; font-family: system-ui, sans-serif;
+  background: #f6f7fb; display: grid; place-items: center; min-height: 100vh;
+}
+.card {
+  width: min(800px, 100%); background: #fff; border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08); padding: 20px;
+}
+.row { display: flex; gap: 8px; }
+input, button {
+  padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px;
+}
+button { background: #ff6a00; color: white; border: none; cursor: pointer; }
+button:hover { filter: brightness(.95); }
+.hidden { display: none; }
+
+.meta { display: flex; justify-content: space-between; color: #666; margin: 10px 0 6px; }
+#messages {
+  list-style: none; padding: 0; margin: 0; height: 50vh; overflow-y: auto;
+  border: 1px solid #eee; border-radius: 10px; background: #fafbff;
+}
+#messages li { padding: 10px 12px; border-bottom: 1px dashed #eee; }
+#messages li .time { color: #999; font-size: 12px; margin-left: 6px; }
+#messages li.self { background: #fff; }
+#typing { height: 20px; font-size: 13px; color: #777; margin: 6px 0; }
+@media (max-width: 520px) {
+  .row { flex-direction: column; }
+}

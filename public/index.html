@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CODTECH Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>💬 CODTECH Chat</h1>
+
+    <form id="joinForm" class="row">
+      <input id="username" placeholder="Your name" required />
+      <input id="room" placeholder="Room (default: general)" />
+      <button type="submit">Join</button>
+    </form>
+
+    <div id="chat" class="hidden">
+      <div class="meta">
+        <div>Room: <span id="roomName">general</span></div>
+        <div>Online: <span id="users"></span></div>
+      </div>
+
+      <ul id="messages"></ul>
+
+      <div id="typing"></div>
+
+      <form id="msgForm" class="row">
+        <input id="msgInput" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
